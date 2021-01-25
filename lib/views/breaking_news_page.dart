@@ -26,7 +26,10 @@ class BreakingNewsPage extends StatelessWidget {
                     return ListTile(
                       leading: CircleAvatar(
                         radius: 30.0,
-                        backgroundImage: NetworkImage(productController.breakingModel.value.result[index].images.imageDefault),
+                        backgroundImage: NetworkImage(
+                          productController.breakingModel.value.result[index]
+                              .images.imageDefault,
+                        ),
                         backgroundColor: Colors.transparent,
                       ),
                       title: Text(

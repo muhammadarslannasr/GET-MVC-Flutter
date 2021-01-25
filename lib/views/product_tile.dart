@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_get_api_mvc/models/product.dart';
 import 'package:get/get.dart';
+import 'package:skeleton_text/skeleton_text.dart';
 
 class ProductTile extends StatelessWidget {
   final Product product;
@@ -26,6 +27,18 @@ class ProductTile extends StatelessWidget {
                   child: Image.network(
                     product.imageLink,
                     fit: BoxFit.cover,
+                    loadingBuilder: (BuildContext context, Widget child,ImageChunkEvent loadingProgress){
+                      if(loadingProgress == null) return child;
+                      return SkeletonAnimation(
+                        child: Container(
+                          height: 180,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: Colors.grey[300],
+                          ),
+                        ),
+                      );
+                    },
                   ),
                 ),
                 Positioned(

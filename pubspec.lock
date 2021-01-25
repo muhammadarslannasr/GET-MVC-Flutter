@@ -123,6 +123,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.9.2"
+  skeleton_text:
+    dependency: "direct main"
+    description:
+      name: skeleton_text
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -170,6 +177,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.19-nullsafety.2"
+  tutorial_coach_mark:
+    dependency: "direct main"
+    description:
+      name: tutorial_coach_mark
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.2"
   typed_data:
     dependency: transitive
     description:
