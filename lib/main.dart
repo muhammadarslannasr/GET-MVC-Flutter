@@ -1,13 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_get_api_mvc/local_database/database.dart';
+import 'package:flutter_get_api_mvc/local_database/task_dao.dart';
 import 'package:flutter_get_api_mvc/views/home_page.dart';
 import 'package:get/get.dart';
 
-void main() {
-  runApp(MyApp());
+Future<void> main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final database = await $FloorFlutterDatabase
+      .databaseBuilder('flutter_database.db')
+      .build();
+  final dao = database.taskDao;
+
+  runApp(MyApp(dao: dao,));
 }
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
+  final TaskDao dao;
+
+  const MyApp({this.dao});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -28,7 +43,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: HomePage(dao: dao,),
     );
   }
 }
