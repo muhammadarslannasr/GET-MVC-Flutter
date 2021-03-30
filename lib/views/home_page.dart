@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_get_api_mvc/controllers/product_controller.dart';
 import 'package:flutter_get_api_mvc/local_database/task_dao.dart';
 import 'package:flutter_get_api_mvc/views/breaking_news_page.dart';
+import 'package:flutter_get_api_mvc/views/nearby_locations_page.dart';
 import 'package:flutter_get_api_mvc/views/product_tile.dart';
 import 'package:flutter_get_api_mvc/views/skeleton_text_page.dart';
 import 'package:flutter_get_api_mvc/views/tasks_page.dart';
@@ -57,7 +58,8 @@ class HomePage extends StatelessWidget {
                 IconButton(
                     icon: Icon(Icons.view_list_rounded),
                     onPressed: () {
-                      Get.to(TasksPage(title: 'Tasks Local DB', dao: dao));
+                      //Get.to(TasksPage(title: 'Tasks Local DB', dao: dao));
+                      Get.to(NearbyLocationsPage());
                     }),
                 IconButton(
                     icon: Icon(Icons.grid_view),
