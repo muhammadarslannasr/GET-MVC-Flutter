@@ -4,8 +4,6 @@ import 'package:flutter_get_api_mvc/local_database/task_dao.dart';
 import 'package:flutter_get_api_mvc/views/breaking_news_page.dart';
 import 'package:flutter_get_api_mvc/views/nearby_locations_page.dart';
 import 'package:flutter_get_api_mvc/views/product_tile.dart';
-import 'package:flutter_get_api_mvc/views/skeleton_text_page.dart';
-import 'package:flutter_get_api_mvc/views/tasks_page.dart';
 import 'package:flutter_get_api_mvc/views/tutorial_coach_mark_page.dart';
 import 'package:flutter_get_api_mvc/widgets/skelton_loading_animation_widget.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
