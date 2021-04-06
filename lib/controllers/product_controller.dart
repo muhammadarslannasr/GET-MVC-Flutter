@@ -6,7 +6,7 @@ import 'package:flutter_get_api_mvc/services/remote_services.dart';
 import 'package:get/get.dart';
 
 class ProductController extends GetxController {
-  var isLoading = true.obs;
+  var isLoading = false.obs;
   var productList = List<Product>().obs;
   var breakingModel = BreakingNewsModel().obs;
   var nearbyEventsModel = EventsNearbyModel().obs;
@@ -16,7 +16,7 @@ class ProductController extends GetxController {
   void onInit() {
     fetchProducts();
     fetchBreakingNews();
-    fetchNearbyEvents();
+    //fetchNearbyEvents();
     fetchEventCheckInStatus();
     super.onInit();
   }
