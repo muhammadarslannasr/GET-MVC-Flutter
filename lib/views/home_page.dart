@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_get_api_mvc/controllers/product_controller.dart';
 import 'package:flutter_get_api_mvc/local_database/task_dao.dart';
 import 'package:flutter_get_api_mvc/views/breaking_news_page.dart';
+import 'package:flutter_get_api_mvc/views/image_testing_immediate_load_page.dart';
 import 'package:flutter_get_api_mvc/views/nearby_locations_page.dart';
 import 'package:flutter_get_api_mvc/views/product_tile.dart';
 import 'package:flutter_get_api_mvc/views/tutorial_coach_mark_page.dart';
@@ -34,7 +35,11 @@ class HomePage extends StatelessWidget {
                 color: Colors.black,
               ),
               onPressed: () {
-                Get.to(BreakingNewsPage());
+                //Get.to(BreakingNewsPage());
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ImageTestingImmediateLoadPage()),
+                );
               })
         ],
       ),
